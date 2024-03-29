@@ -1,16 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerWalk : MonoBehaviour
 {
+    //Player walk
     private float moveSpeed = 5f;
     private Rigidbody2D rb;
     private Vector2 playerMove;
 
+    //Player animator
+    private Animator anim;
+
+
     // Start is called before the first frame update
     void Start()
     {
+        anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -22,7 +29,28 @@ public class PlayerWalk : MonoBehaviour
 
     private void FixedUpdate()
     {
-        playerMove = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
-        rb.velocity = playerMove * moveSpeed;
+
+        //Player move code
+        if (playerMove != Vector2.zero)
+        {
+            playerMove = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
+            rb.velocity = playerMove * moveSpeed;
+            anim.SetBool("IsWalking", true);
+        }
+        else
+        {
+            anim.SetBool("IsWalking", false);
+        }
+    }
+
+    private void OnMove(InputValue value)
+    {
+        playerMove = value.Get<Vector2>();
+
+        if (playerMove != Vector2.zero)
+        {
+            anim.SetFloat("XInput", playerMove.x);
+            anim.SetFloat("YInput", playerMove.y);
+        }
     }
 }
