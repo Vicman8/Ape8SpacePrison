@@ -31,10 +31,11 @@ public class PlayerWalk : MonoBehaviour
     {
 
         //Player move code
+        playerMove = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
+        rb.velocity = playerMove * moveSpeed;
+
         if (playerMove != Vector2.zero)
         {
-            playerMove = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
-            rb.velocity = playerMove * moveSpeed;
             anim.SetBool("IsWalking", true);
         }
         else
