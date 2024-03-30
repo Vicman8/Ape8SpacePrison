@@ -24,34 +24,27 @@ public class PlayerWalk : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
     }
 
     private void FixedUpdate()
     {
 
         //Player move code
-        playerMove = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
+        playerMove = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         rb.velocity = playerMove * moveSpeed;
 
         if (playerMove != Vector2.zero)
         {
             anim.SetBool("IsWalking", true);
+            anim.SetFloat("XInput", playerMove.x);
+            anim.SetFloat("YInput", playerMove.y);
         }
         else
         {
             anim.SetBool("IsWalking", false);
+            anim.SetFloat("XInput", 0);
+            anim.SetFloat("YInput", 0);
         }
     }
 
-    private void OnMove(InputValue value)
-    {
-        playerMove = value.Get<Vector2>();
-
-        if (playerMove != Vector2.zero)
-        {
-            anim.SetFloat("XInput", playerMove.x);
-            anim.SetFloat("YInput", playerMove.y);
-        }
-    }
 }
