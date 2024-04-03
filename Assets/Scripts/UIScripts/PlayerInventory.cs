@@ -7,6 +7,9 @@ public class PlayerInventory
     public GameObject[] Inventory;
     public int cap;
 
+    public static PlayerInventory Inv { get { return inv; } }
+    private static PlayerInventory inv;
+
     public PlayerInventory()
     {
         this.cap = 5;
@@ -14,7 +17,7 @@ public class PlayerInventory
     }
 
     // returns true if Inventory is full
-    public bool Full()
+    public bool isFull()
     {
         foreach (GameObject i in Inventory)
         {
@@ -31,7 +34,7 @@ public class PlayerInventory
     {
         bool placed = false;
 
-        if (!Full())
+        if (!isFull())
         {
             for (int i = 0; i < Inventory.Length; i++)
             {
