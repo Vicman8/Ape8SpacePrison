@@ -42,8 +42,6 @@ public class PlayerWalk : MonoBehaviour
         else
         {
             anim.SetBool("IsWalking", false);
-            anim.SetFloat("XInput", playerMove.x);
-            anim.SetFloat("YInput", playerMove.y);
         }
     }
 
