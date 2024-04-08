@@ -12,19 +12,18 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         PlayerInventory inventory = new PlayerInventory();
-        GameObject[] slots = CreateCells();
+        //GameObject[] slots = CreateCells();
     }
 
-    public GameObject[] CreateCells()
+    /*public GameObject[] CreateCells()
     {
         GameObject[] cells = new GameObject[inventory.cap];
         for (int i = 0; i < inventory.cap; i++)
         {
             Vector3 spawnPos = new Vector3(-300 + (i * 50), 150, 0);
-            GameObject cell = Instantiate(cellPrefab, cellParent);
-            cells[i] = cell;
+            cells[i] = Instantiate(cellPrefab, spawnPos, Quaternion.identity);
             //cells[i].transform.SetParent(cellParent);
         }
         return cells;
-    }
+    }*/
 }
