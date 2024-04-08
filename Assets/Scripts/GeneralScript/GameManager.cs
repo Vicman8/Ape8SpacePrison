@@ -11,11 +11,11 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        PlayerInventory inventory = new PlayerInventory();
-        //GameObject[] slots = CreateCells();
+        inventory = new PlayerInventory();
+        GameObject[] slots = CreateCells();
     }
 
-    /*public GameObject[] CreateCells()
+    public GameObject[] CreateCells()
     {
         GameObject[] cells = new GameObject[inventory.cap];
         for (int i = 0; i < inventory.cap; i++)
@@ -25,5 +25,5 @@ public class GameManager : MonoBehaviour
             //cells[i].transform.SetParent(cellParent);
         }
         return cells;
-    }*/
+    }
 }
