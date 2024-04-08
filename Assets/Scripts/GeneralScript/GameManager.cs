@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour
         for (int i = 0; i < inventory.cap; i++)
         {
             Vector3 spawnPos = new Vector3(-300 + (i * 50), 150, 0);
-            cells[i] = Instantiate(cellPrefab, spawnPos, Quaternion.identity);
+            cells[i] = Instantiate(cellPrefab, spawnPos, Quaternion.identity, cellParent);
             //cells[i].transform.SetParent(cellParent);
         }
         return cells;
