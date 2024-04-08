@@ -4,11 +4,8 @@ using UnityEngine;
 
 public class PlayerInventory
 {
-    public GameObject[] Inventory;
-    public int cap;
-
-    public static PlayerInventory Inv { get { return inv; } }
-    private static PlayerInventory inv;
+    public GameObject[] Inventory; 
+    public int cap = 5;
 
     public PlayerInventory()
     {
@@ -28,6 +25,7 @@ public class PlayerInventory
         }
         return true;
     }
+   
 
     // adds item to Inventory if Inventory isn't full
     public void AddItem(GameObject item)
