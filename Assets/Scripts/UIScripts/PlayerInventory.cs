@@ -4,19 +4,39 @@ using UnityEngine;
 
 public class PlayerInventory
 {
-    public GameObject[] Inventory; 
-    public int cap = 5;
+    private GameObject[] inventory; 
+    private int cap = 5;
 
     public PlayerInventory()
     {
         this.cap = 5;
-        Inventory = new GameObject[this.cap];
+        inventory = new GameObject[this.cap];
+    }
+
+    // ask about the two following methods
+    public int Cap
+    {
+        get
+        {
+            return this.cap;
+        }
+        set
+        {
+            cap = value;
+        }
+    }
+    public GameObject[] Inventory
+    {
+        get
+        {
+            return this.inventory;
+        }
     }
 
     // returns true if Inventory is full
     public bool isFull()
     {
-        foreach (GameObject i in Inventory)
+        foreach (GameObject i in inventory)
         {
             if (i == null)
             {
@@ -34,12 +54,12 @@ public class PlayerInventory
 
         if (!isFull())
         {
-            for (int i = 0; i < Inventory.Length; i++)
+            for (int i = 0; i < inventory.Length; i++)
             {
-                if (Inventory[i] == null && !placed)
+                if (inventory[i] == null && !placed)
                 {
                     placed = true;
-                    Inventory[i] = item;
+                    inventory[i] = item;
                 }
             }
         }
@@ -48,11 +68,11 @@ public class PlayerInventory
     // removes a given item from Inventory
     public void RemoveItem(GameObject item)
     {
-        for (int i = 0; i < Inventory.Length; i++)
+        for (int i = 0; i < inventory.Length; i++)
         {
-            if (Inventory[i] == item)
+            if (inventory[i] == item)
             {
-                Inventory[i] = null;
+                inventory[i] = null;
             }
         }
     }
@@ -62,11 +82,11 @@ public class PlayerInventory
     {
         GameObject[] temp = new GameObject[cap + capInc];
 
-        for (int i = 0; i < Inventory.Length; i++)
+        for (int i = 0; i < inventory.Length; i++)
         {
-            temp[i] = Inventory[i];
+            temp[i] = inventory[i];
         }
-        Inventory = temp;
+        inventory = temp;
     }
 
 }

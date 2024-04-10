@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public PlayerInventory inventory;
+    PlayerInventory inventory;
+
+    private GameObject[] slots;
 
     [SerializeField] Transform cellParent;
     [SerializeField] GameObject cellPrefab;
@@ -12,18 +14,29 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         inventory = new PlayerInventory();
-        GameObject[] slots = CreateCells();
+        slots = CreateCells();
     }
 
+    // instantiates slots for inventory
     public GameObject[] CreateCells()
     {
-        GameObject[] cells = new GameObject[inventory.cap];
-        for (int i = 0; i < inventory.cap; i++)
+        GameObject[] cells = new GameObject[inventory.Cap];
+        for (int i = 0; i < inventory.Cap; i++)
         {
-            Vector3 spawnPos = new Vector3(-300 + (i * 50), 150, 0);
+            // ask if there is a better way for the following line
+            Vector3 spawnPos = new Vector3(50 + (i * 50), 500, 0);
             cells[i] = Instantiate(cellPrefab, spawnPos, Quaternion.identity, cellParent);
-            //cells[i].transform.SetParent(cellParent);
         }
         return cells;
+    }
+    public void UpdateInv()
+    {
+        for (int i = 0; i < inventory.Cap; i++)
+        {
+            if (inventory.Inventory[i] != null)
+            {
+                // ask about how to reference the "image" child of each of the slots
+            }
+        }
     }
 }
