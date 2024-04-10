@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -15,6 +17,17 @@ public class GameManager : MonoBehaviour
     {
         inventory = new PlayerInventory();
         slots = CreateCells();
+    }
+
+    private void Start()
+    {
+        FindObjectOfType<UI>().OnItemAdded += HandleItemAdded;
+    }
+
+    private void HandleItemAdded(ItemData obj)
+    {
+        slots[0].transform.GetChild(0).GetComponent<Image>().sprite = obj.Image;
+        slots[0].transform.GetChild(0).GetComponent<Image>().color = Color.white;
     }
 
     // instantiates slots for inventory

@@ -48,21 +48,24 @@ public class PlayerInventory
    
 
     // adds item to Inventory if Inventory isn't full
-    public void AddItem(GameObject item)
+    public void AddItem(ItemData item)
     {
-        bool placed = false;
+        Debug.Log("Added " + item.Name + " to inventory");
+        return;
 
-        if (!isFull())
-        {
-            for (int i = 0; i < inventory.Length; i++)
-            {
-                if (inventory[i] == null && !placed)
-                {
-                    placed = true;
-                    inventory[i] = item;
-                }
-            }
-        }
+        //bool placed = false;
+
+        //if (!isFull())
+        //{
+        //    for (int i = 0; i < inventory.Length; i++)
+        //    {
+        //        if (inventory[i] == null && !placed)
+        //        {
+        //            placed = true;
+        //            inventory[i] = item;
+        //        }
+        //    }
+        //}
     }
 
     // removes a given item from Inventory
