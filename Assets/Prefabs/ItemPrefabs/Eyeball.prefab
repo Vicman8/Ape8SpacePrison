@@ -124,3 +124,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2e3acc450078df4aab2145a083d98d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  data:
+    name: Eyeball
+    image: {fileID: 21300000, guid: e53e778f13f4dda49b0dde56c3e05477, type: 3}

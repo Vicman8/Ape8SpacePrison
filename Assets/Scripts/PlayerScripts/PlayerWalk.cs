@@ -32,11 +32,6 @@ public class PlayerWalk : MonoBehaviour
         inventory.AddItem(item);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-    }
-
     private void FixedUpdate()
     {
 

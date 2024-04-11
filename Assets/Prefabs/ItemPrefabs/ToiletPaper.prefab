@@ -72,6 +72,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2e3acc450078df4aab2145a083d98d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  data:
+    name: SpaceToiletPaper
+    image: {fileID: 21300000, guid: acb502005d7a270428973ec2e28ea70f, type: 3}
 --- !u!212 &8726386276465732520
 SpriteRenderer:
   m_ObjectHideFlags: 0

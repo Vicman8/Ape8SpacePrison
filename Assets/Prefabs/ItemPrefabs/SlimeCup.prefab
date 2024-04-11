@@ -46,6 +46,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2e3acc450078df4aab2145a083d98d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  data:
+    name: SlimeCup
+    image: {fileID: 21300000, guid: 4959d1160d663fa4dbeb5ef622d8c8d1, type: 3}
 --- !u!61 &3775474184271125398
 BoxCollider2D:
   m_ObjectHideFlags: 0

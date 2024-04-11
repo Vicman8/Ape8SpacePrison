@@ -46,6 +46,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2e3acc450078df4aab2145a083d98d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  data:
+    name: Soap
+    image: {fileID: 21300000, guid: 1c3483d29e97b4c4d915e5f3e2d07732, type: 3}
 --- !u!212 &4571672406424855644
 SpriteRenderer:
   m_ObjectHideFlags: 0

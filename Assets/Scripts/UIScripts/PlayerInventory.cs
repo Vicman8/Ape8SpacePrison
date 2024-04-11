@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class PlayerInventory
 {
-    private GameObject[] inventory; 
+    public static ItemData[] inventory; 
     private int cap = 5;
 
     public PlayerInventory()
     {
         this.cap = 5;
-        inventory = new GameObject[this.cap];
+        inventory = new ItemData[this.cap];
     }
 
     // ask about the two following methods
@@ -25,18 +25,18 @@ public class PlayerInventory
             cap = value;
         }
     }
-    public GameObject[] Inventory
+    /*public ItemData[] Inventory
     {
-        get
-        {
-            return this.inventory;
-        }
-    }
+        //public double this[int i]
+    
+        get { return inventory; }
+    }*/
+
 
     // returns true if Inventory is full
-    public bool isFull()
+    public static bool isFull()
     {
-        foreach (GameObject i in inventory)
+        foreach (ItemData i in inventory)
         {
             if (i == null)
             {
@@ -62,14 +62,13 @@ public class PlayerInventory
         //        if (inventory[i] == null && !placed)
         //        {
         //            placed = true;
-        //            inventory[i] = item;
         //        }
         //    }
         //}
     }
 
     // removes a given item from Inventory
-    public void RemoveItem(GameObject item)
+    public void RemoveItem(ItemData item)
     {
         for (int i = 0; i < inventory.Length; i++)
         {
@@ -83,7 +82,7 @@ public class PlayerInventory
     // increases Inventory capacity
     public void IncreaseCapacity(int capInc)
     {
-        GameObject[] temp = new GameObject[cap + capInc];
+        ItemData[] temp = new ItemData[cap + capInc];
 
         for (int i = 0; i < inventory.Length; i++)
         {
