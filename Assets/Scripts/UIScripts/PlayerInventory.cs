@@ -105,11 +105,11 @@ public class PlayerInventory
     }
 
     //Check if the player has a specific item in their inventory
-    public bool HasItem(ItemData item)
+    public bool HasItem(ItemData.ItemTypeEnum itemType)
     {
         foreach (ItemData inventoryItem in inventory)
         {
-            if (inventoryItem != null && inventoryItem == item)
+            if (inventoryItem.ItemType == itemType)
             {
                 return true;
             }
@@ -118,25 +118,27 @@ public class PlayerInventory
     }
 
     public bool CraftItem(ItemData item)
-    {
-        foreach (ItemData material in item.CraftingMaterials)
-        {
-            if (!HasItem(material))
-            {
-                Debug.Log("Missing required materials for crafting " + item.Name);
-                return false;
-            }
-        }
-        //Deduct crafting materials from inventory
-        foreach (ItemData material in item.CraftingMaterials)
-        {
-            RemoveItem(material);
-        }
+    { 
+        return true; 
+    //{
+    //    foreach (ItemData material in item.CraftingMaterials)
+    //    {
+    //        if (!HasItem(material))
+    //        {
+    //            Debug.Log("Missing required materials for crafting " + item.Name);
+    //            return false;
+    //        }
+    //    }
+    //    //Deduct crafting materials from inventory
+    //    foreach (ItemData material in item.CraftingMaterials)
+    //    {
+    //        RemoveItem(material);
+    //    }
 
-        //Add crafted item to inventory
-        AddItem(item);
-        Debug.Log("Crafted " + item.Name);
-        return true;
+    //    //Add crafted item to inventory
+    //    AddItem(item);
+    //    Debug.Log("Crafted " + item.Name);
+    //    return true;
         
     }
 
