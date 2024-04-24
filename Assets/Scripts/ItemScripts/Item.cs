@@ -16,4 +16,17 @@ public class Item : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    //Craft Item when player interacts with it
+    private void Interact()
+    {
+        if (!PlayerInventory.isFull())
+        {
+            PlayerInventory inventory = FindObjectOfType<PlayerInventory>();
+            if (inventory.CraftItem(data))
+            {
+                Destroy(gameObject);
+            }
+        }
+    }
 }

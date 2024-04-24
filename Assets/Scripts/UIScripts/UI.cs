@@ -6,9 +6,15 @@ using UnityEngine;
 public class UI : MonoBehaviour
 {
     public Action<ItemData> OnItemAdded;
+    public Action<ItemData> OnCraftButtonClicked;
 
     public void AddItem(ItemData item)
     {
         OnItemAdded?.Invoke(item);
+    }
+
+    public void CraftButtonClicked(ItemData item)
+    {
+        OnCraftButtonClicked?.Invoke(item);
     }
 }

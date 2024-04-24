@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         FindObjectOfType<UI>().OnItemAdded += HandleItemAdded;
+        FindObjectOfType<UI>().OnCraftButtonClicked += CraftItem;
     }
 
     private void HandleItemAdded(ItemData obj)
@@ -37,6 +38,19 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private void CraftItem(ItemData obj)
+    {
+        bool hasMaterials = true;
+
+        if (hasMaterials)
+        {
+            inv.AddItem(obj);
+        }
+        else
+        {
+            Debug.Log("Missing materials for crafting " + obj.Name);
+        }
+    }
     // instantiates slots for inventory
     /*public GameObject[] CreateCells()
     {

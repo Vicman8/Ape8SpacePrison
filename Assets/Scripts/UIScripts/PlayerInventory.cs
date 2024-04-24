@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class PlayerInventory
 {
+    private static PlayerInventory instance;
+    public static PlayerInventory Instance { get { return instance; } }
+
     public static ItemData[] inventory; 
     private int cap = 5;
 
@@ -12,6 +15,16 @@ public class PlayerInventory
         this.cap = 5;
         inventory = new ItemData[this.cap];
     }
+
+    public static void Initialize()
+    {
+        if(instance == null)
+        {
+            instance = new PlayerInventory();
+        }
+    }
+
+
 
     // ask about the two following methods
     public int Cap
@@ -89,6 +102,42 @@ public class PlayerInventory
             temp[i] = inventory[i];
         }
         inventory = temp;
+    }
+
+    //Check if the player has a specific item in their inventory
+    public bool HasItem(ItemData item)
+    {
+        foreach (ItemData inventoryItem in inventory)
+        {
+            if (inventoryItem != null && inventoryItem == item)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public bool CraftItem(ItemData item)
+    {
+        foreach (ItemData material in item.CraftingMaterials)
+        {
+            if (!HasItem(material))
+            {
+                Debug.Log("Missing required materials for crafting " + item.Name);
+                return false;
+            }
+        }
+        //Deduct crafting materials from inventory
+        foreach (ItemData material in item.CraftingMaterials)
+        {
+            RemoveItem(material);
+        }
+
+        //Add crafted item to inventory
+        AddItem(item);
+        Debug.Log("Crafted " + item.Name);
+        return true;
+        
     }
 
 }
