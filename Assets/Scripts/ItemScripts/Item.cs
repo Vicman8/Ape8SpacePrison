@@ -22,11 +22,11 @@ public class Item : MonoBehaviour
     {
         if (!PlayerInventory.isFull())
         {
-            PlayerInventory inventory = FindObjectOfType<PlayerInventory>();
-            if (inventory.CraftItem(data))
-            {
-                Destroy(gameObject);
-            }
+            //PlayerInventory inventory = FindObjectOfType<PlayerInventory>();
+            //if (inventory.CraftItem(data))
+           // {
+           //     Destroy(gameObject);
+           // }
         }
     }
 }
