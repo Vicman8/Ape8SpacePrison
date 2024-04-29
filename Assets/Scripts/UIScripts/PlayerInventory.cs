@@ -81,7 +81,7 @@ public class PlayerInventory
     }
 
     // removes a given item from Inventory
-    public void RemoveItem(ItemData item)
+    public static void RemoveItem(ItemData item)
     {
         for (int i = 0; i < inventory.Length; i++)
         {

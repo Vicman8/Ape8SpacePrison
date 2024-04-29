@@ -13,8 +13,4 @@ public class UI : MonoBehaviour
         OnItemAdded?.Invoke(item);
     }
 
-    public void CraftButtonClicked(ItemData item)
-    {
-        OnCraftButtonClicked?.Invoke(item);
-    }
 }

@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class Item : MonoBehaviour
 {
+    public ItemData ItemData { get { return data; } }
+
     [SerializeField] private ItemData data;
 
 

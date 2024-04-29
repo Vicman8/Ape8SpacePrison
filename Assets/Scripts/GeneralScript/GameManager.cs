@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     PlayerInventory inv;
 
     [SerializeField] private GameObject[] slots;
+    [SerializeField] private GameObject dragSlot;
     //[SerializeField] Transform cellParent;
     //[SerializeField] GameObject cellPrefab;
 
@@ -37,6 +38,12 @@ public class GameManager : MonoBehaviour
                 PlayerInventory.inventory[i] = obj;
             }
         }
+    }
+
+    public void HandleItemRemoved(int slotNumber)
+    {
+        slots[slotNumber].transform.GetChild(0).GetComponent<Image>().sprite = null;
+        slots[slotNumber].transform.GetChild(0).GetComponent<Image>().color = Color.clear;
     }
 
     private void CraftItem(ItemData obj)
@@ -77,4 +84,15 @@ public class GameManager : MonoBehaviour
             }
         }
     }*/
+
+    public void StartDragSlot()
+    {
+        dragSlot.SetActive(true);
+        dragSlot.transform.position = new Vector3(Input.mousePosition.x, Input.mousePosition.y, dragSlot.transform.position.z);
+    }
+
+    public void EndDragSlot()
+    {
+        dragSlot.SetActive(false);
+    }
 }

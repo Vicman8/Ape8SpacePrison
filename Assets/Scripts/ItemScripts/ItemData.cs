@@ -12,12 +12,9 @@ public class ItemData
 
     public List<ItemTypeEnum> CraftingMaterials { get { return CraftingMaterials;  } }
 
-    public enum ItemTypeEnum { Eyeball, Soap, TP}
+    public enum ItemTypeEnum { Eyeball, Soap, TP, Slimecup, Tentacle, Slimeplunger, Cigs}
 
     [SerializeField] private string name;
     [SerializeField] private Sprite image;
-    [SerializeField] private List<ItemTypeEnum> craftingMaterials;  // required to craft this item
     [SerializeField] private ItemTypeEnum itemType;
-
-    //private Dictionary<ItemTypeEnum, List<ItemTypeEnum>> craftTable = new Dictionary<ItemTypeEnum, List<ItemTypeEnum>>()
 }
