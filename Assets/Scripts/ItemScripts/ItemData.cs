@@ -12,7 +12,7 @@ public class ItemData
 
     public List<ItemTypeEnum> CraftingMaterials { get { return CraftingMaterials;  } }
 
-    public enum ItemTypeEnum { Eyeball, Soap, TP, Slimecup, Tentacle, Slimeplunger, Cigs}
+    public enum ItemTypeEnum { Eyeball, Soap, TP, Slimecup, Tentacle, Slimeplunger, Cigs, Knife, SoapKey}
 
     [SerializeField] private string name;
     [SerializeField] private Sprite image;

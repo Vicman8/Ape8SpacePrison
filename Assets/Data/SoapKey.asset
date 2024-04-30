@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9928cacfca9661d41a4e13f26310ab80, type: 3}
-  m_Name: TP
+  m_Name: SoapKey
   m_EditorClassIdentifier: 
-  result: 2
-  itemPrefab: {fileID: 2918348222988680866, guid: f256da35ed6be044e8f640907f688dc2, type: 3}
-  ingredients: 0000000001000000
+  result: 8
+  itemPrefab: {fileID: 2918348222988680866, guid: fc72243e3b51e8a40b77be3fbd6e08f5, type: 3}
+  ingredients: 0100000007000000
