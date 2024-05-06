@@ -57,6 +57,14 @@ public class InvSlot : MonoBehaviour, IDragHandler
                 }
                 else
                 {
+                    if(PlayerInventory.inventory[slotNumber] == null || PlayerInventory.inventory[hoveredSlotNumber] == null)
+                    {
+                        hoveredSlotNumber = -1;
+                        isDragging = false;
+                        gm.EndDragSlot();
+                        return;                  
+                    }
+
                     Debug.Log("Attempting to combine slot " + slotNumber + " with " + hoveredSlotNumber);
                     CraftData craft = CraftingManager.TryCraftMaterials(
                         PlayerInventory.inventory[slotNumber].ItemType,
