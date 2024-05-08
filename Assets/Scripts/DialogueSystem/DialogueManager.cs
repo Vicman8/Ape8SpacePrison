@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -58,7 +59,7 @@ public class DialogueManager : MonoBehaviour
     public void SelectResponse(DialogueResponse response, string title)
     {
         //Check if theres a follow-up node
-        if(response.nextNode != null)
+        if(!response.nextNode.IsLastNode())
         {
             StartDialogue(title, response.nextNode); //Start next dialogue
         }

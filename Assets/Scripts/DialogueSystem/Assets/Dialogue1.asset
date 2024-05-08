@@ -13,21 +13,70 @@ MonoBehaviour:
   m_Name: Dialogue1
   m_EditorClassIdentifier: 
   RootNode:
-    dialogueText: What do you want prisoner?
+    dialogueText: You know the rules, prisoner, but I see you're persistent.
     responses:
-    - responseText: Just looking at your beauty
+    - responseText: Rules are meant to be bent for the right person.
       nextNode:
-        dialogueText: Do want to test me?
+        dialogueText: Smooth talk won't sway me, but I'll admit, it's an intriguing
+          notion.
         responses:
-        - responseText: No no sorry I'll just be on my way
+        - responseText: I'd endure a thousand days in this cell if it meant one moment
+            with you.
           nextNode:
-            dialogueText: 
-            responses: []
-        - responseText: No I want to test our love
+            dialogueText: Such words are dangerous in this place, but they do not
+              fall on deaf ears.
+            responses:
+            - responseText: Dangerous maybe, but truth often is, and my truth is
+                I can't stop thinking about you.
+              nextNode:
+                dialogueText: ' "Truth or not, we''re bound by rules, and I can''t
+                  jeopardize my position for sentiment.'
+                responses:
+                - responseText: Close
+                  nextNode:
+                    dialogueText: 
+                    responses: []
+            - responseText: Danger is relative, Warden, and my greatest risk is letting
+                you slip away
+              nextNode:
+                dialogueText: Your persistence is admirable, and perhaps rules were
+                  made to be tested. Meet me after lights out.
+                responses:
+                - responseText: Close
+                  nextNode:
+                    dialogueText: 
+                    responses: []
+        - responseText: Perhaps the heart knows no bars, and it has chosen you
           nextNode:
-            dialogueText: 
-            responses: []
-    - responseText: Oh nothing much
+            dialogueText: Sentimentality won't sway my judgment, but I can't deny
+              the sentiment behind your words.
+            responses:
+            - responseText: Perhaps it's not about changing circumstances, but about
+                finding a reason to endure them.
+              nextNode:
+                dialogueText: Endurance is commendable, but love won't rewrite our
+                  fates within these walls
+                responses:
+                - responseText: Close
+                  nextNode:
+                    dialogueText: 
+                    responses: []
+            - responseText: If flattery won't sway you, then perhaps earnestness
+                will, for every word I speak to you is true
+              nextNode:
+                dialogueText: Your sincerity is unexpected, but I've found myself
+                  thinking about you too. Meet me after lights out.
+                responses:
+                - responseText: Close
+                  nextNode:
+                    dialogueText: 
+                    responses: []
+    - responseText: Maybe I'm just hoping you'll make an exception for me.
       nextNode:
-        dialogueText: 
-        responses: []
+        dialogueText: Flattery won't change your circumstances, but I appreciate
+          the effort.
+        responses:
+        - responseText: Close
+          nextNode:
+            dialogueText: 
+            responses: []
