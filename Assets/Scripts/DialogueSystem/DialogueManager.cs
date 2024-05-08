@@ -66,6 +66,7 @@ public class DialogueManager : MonoBehaviour
         {
             //if no follow-up node, end the dialogue
             HideDialogue();
+            Debug.Log("Hide");
         }
     }
 

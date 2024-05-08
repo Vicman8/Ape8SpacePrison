@@ -15,10 +15,19 @@ public class Actor : MonoBehaviour
         {
             SpeakTo();
         }
+        else
+        {
+            Leave();
+        }
     }
     public void SpeakTo()
     {
         DialogueManager.Instance.StartDialogue(Name, Dialogue.RootNode);
+    }
+
+    public void Leave()
+    {
+        DialogueManager.Instance.HideDialogue();
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -34,6 +43,7 @@ public class Actor : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerIsClose = false;
+            Leave();
         }
     }
 }
