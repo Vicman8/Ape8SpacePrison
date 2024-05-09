@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 131c1e26937f7ed439828030cca7decd, type: 3}
+  m_Name: MaxDialogue
+  m_EditorClassIdentifier: 
+  RootNode:
+    dialogueText: Oh, you mean that weird green slime cup? Yeah, I saw it too, but
+      I have no clue where it came from.
+    responses:
+    - responseText: Do you think it's some kind of experiment gone wrong?
+      nextNode:
+        dialogueText: Could be, but I'm not risking a taste test to find out.
+        responses:
+        - responseText: Maybe it's a new secret recipe the kitchen staff are experimenting
+            with, or maybe they're just trying to gross us out.
+          nextNode:
+            dialogueText: Interesting theory. If it's a new recipe, I hope they don't
+              plan on serving it at mealtime.
+            responses:
+            - responseText: Yeah, last time they introduced a 'new recipe,' half
+                the block was sick for a week. I'm not taking any chances.
+              nextNode:
+                dialogueText: 
+                responses:
+                - responseText: Close
+                  nextNode:
+                    dialogueText: 
+                    responses: []
+            - responseText: Well, if it's anything like the usual prison food, it's
+                probably best to stay away from it regardless.
+              nextNode:
+                dialogueText: Good point. I'll pass on the green slime surprise,
+                  thanks. Maybe we can trade it for something useful, though.
+                responses:
+                - responseText: Close
+                  nextNode:
+                    dialogueText: 
+                    responses: []
+        - responseText: '"I heard it''s some kind of extraterrestrial artifact the
+            guards found during a routine spacewalk, but they''re keeping it hush-hush.'
+          nextNode:
+            dialogueText: '"Extraterrestrial artifact? Now that''s intriguing. If
+              that''s true, we might be onto something bigger than we thought. We
+              should find a way to get a closer look without getting caught.'
+            responses:
+            - responseText: An extraterrestrial artifact? That sounds like the plot
+                of one of those old sci-fi vids. But hey, stranger things have happened
+              nextNode:
+                dialogueText: True, but this is space prison. Stranger things are
+                  practically the norm. Let's see if we can turn this into an advantage
+                  somehow.
+                responses:
+                - responseText: Close
+                  nextNode:
+                    dialogueText: 
+                    responses: []
+            - responseText: If it's true, we might be in for a wild ride. Let's tread
+                carefully, though. We don't want to end up on the wrong side of the
+                guards or worse, the aliens.
+              nextNode:
+                dialogueText: Agreed. We'll need to be cautious. Let's keep this
+                  between us for now. Who knows what kind of trouble it could stir
+                  up if word gets out.
+                responses:
+                - responseText: Close
+                  nextNode:
+                    dialogueText: 
+                    responses: []
+    - responseText: I heard rumors it's from the aliens in Sector 7, trying to communicate
+        with us.
+      nextNode:
+        dialogueText: Aliens, huh? That's not as far-fetched as it sounds, considering
+          where we are. Still, I'd rather not jump to conclusions until we have more
+          info.
+        responses:
+        - responseText: Close
+          nextNode:
+            dialogueText: 
+            responses: []
