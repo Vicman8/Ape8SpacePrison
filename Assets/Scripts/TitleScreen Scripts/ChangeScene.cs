@@ -15,4 +15,14 @@ public class ChangeScene : MonoBehaviour
         Application.Quit();
         Debug.Log("Exited");
     }
+
+    public void ToTitle()
+    {
+        SceneManager.LoadScene("Title");
+    }
+
+    public void HowToPlay()
+    {
+        SceneManager.LoadScene("HowToPlay");
+    }
 }
