@@ -45,12 +45,12 @@ MonoBehaviour:
                   nextNode:
                     dialogueText: 
                     responses: []
-        - responseText: '"I heard it''s some kind of extraterrestrial artifact the
-            guards found during a routine spacewalk, but they''re keeping it hush-hush.'
+        - responseText: I heard it's some kind of extraterrestrial artifact the guards
+            found during a routine spacewalk, but they're keeping it hush-hush.
           nextNode:
-            dialogueText: '"Extraterrestrial artifact? Now that''s intriguing. If
-              that''s true, we might be onto something bigger than we thought. We
-              should find a way to get a closer look without getting caught.'
+            dialogueText: Extraterrestrial artifact? Now that's intriguing. If that's
+              true, we might be onto something bigger than we thought. We should
+              find a way to get a closer look without getting caught.
             responses:
             - responseText: An extraterrestrial artifact? That sounds like the plot
                 of one of those old sci-fi vids. But hey, stranger things have happened

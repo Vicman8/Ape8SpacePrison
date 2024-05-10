@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 131c1e26937f7ed439828030cca7decd, type: 3}
+  m_Name: VictorDialogue
+  m_EditorClassIdentifier: 
+  RootNode:
+    dialogueText: Hey, ever noticed how a simple bar of soap can be more than just
+      for cleaning?
+    responses:
+    - responseText: Yeah, like how you can carve shapes into it to pass the time.
+      nextNode:
+        dialogueText: Exactly! And if you're skilled enough, you can even carve something
+          useful, like a makeshift key.
+        responses:
+        - responseText: Yeah, I've heard about that. They say it takes patience and
+            a steady hand.
+          nextNode:
+            dialogueText: Indeed, it does. Crafting a key from soap requires precision,
+              but it's a skill worth mastering.
+            responses:
+            - responseText: Close
+              nextNode:
+                dialogueText: 
+                responses: []
+        - responseText: Really? I never thought about it like that. How do you even
+            start?
+          nextNode:
+            dialogueText: Ah, it all starts with a keen eye and a sharp blade. I
+              could show you sometime if you're interested.
+            responses:
+            - responseText: Close
+              nextNode:
+                dialogueText: 
+                responses: []
+    - responseText: True, it's amazing what you can make with a little creativity.
+      nextNode:
+        dialogueText: Exactly, my friend! With a bit of ingenuity, that bar of soap
+          can become a tool for freedom. Ever heard of molding a key from soap and
+          using a knife to carve it into shape?
+        responses:
+        - responseText: Huh, never tried that before. But it makes sense, I guess.
+          nextNode:
+            dialogueText: Glad you find it intriguing! It's amazing what you can
+              learn when you're stuck in here.
+            responses:
+            - responseText: Close
+              nextNode:
+                dialogueText: 
+                responses: []
+        - responseText: Wow, I never thought about soap that way. You seem to know
+            a lot about this stuff, Victor
+          nextNode:
+            dialogueText: '"I''ve had plenty of time to observe and experiment. Survival
+              instincts kick in, you know?'
+            responses:
+            - responseText: Close
+              nextNode:
+                dialogueText: 
+                responses: []

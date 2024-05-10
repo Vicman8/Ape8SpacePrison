@@ -29,7 +29,7 @@ MonoBehaviour:
             - responseText: Dangerous maybe, but truth often is, and my truth is
                 I can't stop thinking about you.
               nextNode:
-                dialogueText: ' "Truth or not, we''re bound by rules, and I can''t
+                dialogueText: ' Truth or not, we''re bound by rules, and I can''t
                   jeopardize my position for sentiment.'
                 responses:
                 - responseText: Close

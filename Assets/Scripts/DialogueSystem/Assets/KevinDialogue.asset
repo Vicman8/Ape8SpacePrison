@@ -31,8 +31,8 @@ MonoBehaviour:
               nextNode:
                 dialogueText: 
                 responses: []
-        - responseText: '"Sorry, didn''t mean to suggest anything like that. Let''s
-            keep searching, maybe it''s just misplaced.'
+        - responseText: Sorry, didn't mean to suggest anything like that. Let's keep
+            searching, maybe it's just misplaced.
           nextNode:
             dialogueText: No worries. Let's continue searching. It has to be around
               here somewhere.
@@ -44,15 +44,15 @@ MonoBehaviour:
     - responseText: I haven't seen it, but maybe it's a sign of your species evolving
         into something new.
       nextNode:
-        dialogueText: '"Evolving? Huh, that''s an interesting thought. I''ll have
-          to ask my species'' biologist about that, but for now, I just want to find
-          my arm'
+        dialogueText: Evolving? Huh, that's an interesting thought. I'll have to
+          ask my species' biologist about that, but for now, I just want to find
+          my arm
         responses:
         - responseText: Yeah, sorry, that was insensitive of me. Let's forget I mentioned
             it and concentrate on locating your arm.
           nextNode:
-            dialogueText: '"It''s alright, mistakes happen. Let''s just focus on
-              finding my arm.'
+            dialogueText: It's alright, mistakes happen. Let's just focus on finding
+              my arm.
             responses:
             - responseText: Close
               nextNode:
